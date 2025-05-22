@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -12,16 +11,16 @@
     </header>
     <main>
         <h2>My tasks to become a junior back-end developer</h2>
+        <form method="post" action="/task">
+            <input type="text" name="task" placeholder="New task" autofocus>
+            <button type="submit">Add</button>
+        </form>
         <ul>
-            <% tasks.forEach((task)=>{ %>
+            <% tasks.forEach((task, idx)=>{ %>
                 <% if(task.done){ %>
-                    <li>
-                        <%= task.title %><a href="#">Finished</a>
-                    </li>
+                    <li><s><%= task.title %></s><a href="#">Delete</a></li>
                     <% } else{ %>
-                    <li>
-                        <%= task.title %><a href="#">Delete</a>
-                    </li>
+                        <li><%= task.title %><a href="/task/<%= idx %>/done">Finished</a></li>
                 <% } %>
             <% }) %>
         </ul>
