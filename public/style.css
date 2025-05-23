@@ -1,4 +1,3 @@
-/* Reset de base */
 body {
     width: 50%;
     margin: auto;
@@ -6,7 +5,6 @@ body {
     background-color: #c2c3ca;
     padding: 20px;
 }
-/* En-tête */
 header {
     background-color: #4CAF50;
     color: white;
@@ -14,12 +12,10 @@ header {
     border-radius: 8px;
     margin-bottom: 20px;
 }
-/* Titres */
 h1, h2 {
     text-align: center;
     margin: 0 0 15px;
 }
-/* Liste des tâches */
 ul {
     list-style: none;
     padding: 0;
@@ -35,7 +31,6 @@ li {
     align-items: center;
     font-weight: bold;
 }
-/* Lien "Terminé" ou "Supprimer" */
 a {
     background-color: #d9534f;
     color: aliceblue;
@@ -48,11 +43,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
-/* Texte barré pour les tâches terminées */
 s {
     color: #888;
 }
-/* Formulaire d'ajout de tâche */
 form {
     display: flex;
     gap: 10px;

@@ -10,17 +10,17 @@
         <h1>My todo list</h1>
     </header>
     <main>
-        <h2>My tasks to become a junior back-end developer</h2>
+        <h2>My tasks to become a junior developer</h2>
         <form method="post" action="/task">
             <input type="text" name="task" placeholder="New task" autofocus>
             <button type="submit">Add</button>
         </form>
         <ul>
-            <% tasks.forEach((task, idx)=>{ %>
+            <% tasks.forEach((task, idlist)=>{ %>
                 <% if(task.done){ %>
-                    <li><s><%= task.title %></s><a href="#">Delete</a></li>
+                    <li><s><%= task.title %></s><a href="/task/<%= idlist%>/delete">Delete</a></li>
                     <% } else{ %>
-                        <li><%= task.title %><a href="/task/<%= idx %>/done">Finished</a></li>
+                        <li><%= task.title %><a href="/task/<%= idlist %>/done">Finished</a></li>
                 <% } %>
             <% }) %>
         </ul>
