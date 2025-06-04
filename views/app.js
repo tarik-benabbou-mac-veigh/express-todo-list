@@ -2,40 +2,6 @@ const express = require('express');
 const session = require('express-session');
 const app = express();
 const port = 4000;
-// const tasks = [
-//     {
-//         title: 'Learn HTML',
-//         done: true,
-//     },
-//     {
-//         title: 'Learn CSS',
-//         done: true,
-//     },
-//     {
-//         title: 'Learn JavaScript',
-//         done: true,
-//     },
-//     {
-//         title: 'Learn Nodejs',
-//         done: true,
-//     },
-//     {
-//         title: 'Learn Express',
-//         done: false,
-//     },
-//     {
-//         title: 'Learn MongoDB',
-//         done: false,
-//     },
-//     {
-//         title: 'Learn SQL',
-//         done: false,
-//     },
-//     {
-//         title: 'Learn PHP',
-//         done: false,
-//     },
-// ];
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -67,7 +33,7 @@ app.post('/task', (req, res)=>{
 app.get('/', (req,res)=>{
     if(!req.session.tasks){
         req.session.tasks = [];
-    }
+    };
     res.render('todolist', {tasks: req.session.tasks});
 });
 
