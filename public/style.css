@@ -40,9 +40,7 @@ a {
     border-radius: 0.4em;
     text-decoration: none;
 }
-a:hover {
-    text-decoration: underline;
-}
+
 form {
     display: flex;
     gap: 10px;

@@ -39,8 +39,8 @@ app.get('/', (req,res)=>{
 
 /*Change the status of a task*/
 app.get('/task/:id/done', (req,res)=>{
-    req.session.tasks[req.params.id].done = true;
-    res.redirect('/');
+        req.session.tasks[req.params.id].done = true;
+        res.redirect('/');
 });
 
 /*Delete a task from the list*/
